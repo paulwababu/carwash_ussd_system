@@ -87,9 +87,11 @@ def ussd_callback():
 
     elif text == "1*1":
         response = "CON Enter Vehicle Registration "
-
+    elif text == "2*1":
+        response = "CON Enter Vehicle Registration "
     else:
         choices = request.values["text"][:3]
+        # Final menu for Full Car Wash
         if choices == "1*1":
             type_of_wash = "Full Body Wash"
             car_type = "Sedan"
@@ -106,6 +108,27 @@ def ussd_callback():
             car_registration = request.values["text"][4:]
             response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
         elif choices == "1*4":
+            type_of_wash = "Full Body Wash"
+            car_type = "Lorry"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        # Final Menu for Body Wash
+        if choices == "2*1":
+            type_of_wash = "Full Body Wash"
+            car_type = "Sedan"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "2*2":
+            type_of_wash = "Full Body Wash"
+            car_type = "Suv"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "2*3":
+            type_of_wash = "Full Body Wash"
+            car_type = "Truck"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "2*4":
             type_of_wash = "Full Body Wash"
             car_type = "Lorry"
             car_registration = request.values["text"][4:]
