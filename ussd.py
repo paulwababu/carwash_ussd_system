@@ -84,18 +84,32 @@ def ussd_callback():
         # sub menu 7 
         # Selecting Type of Car
         response = "CON Enter Typer of Car\n"
-        response += "1. Sedan"
-        response += "2. Suv"
-        response += "3. Truck (pick-ups)"
-        response += "4. Lorry"
 
     elif text == "1*1":
-        #ussd menus are split using *
-        pass
-    elif text == "1*2":
         response = "CON Enter Vehicle Registration "
+
     else:
-        response = "END Invalid input. Try again."
+        choices = request.values["text"][:3]
+        if choices == "1*1":
+            type_of_wash = "Full Body Wash"
+            car_type = "Sedan"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "1*2":
+            type_of_wash = "Full Body Wash"
+            car_type = "Suv"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "1*3":
+            type_of_wash = "Full Body Wash"
+            car_type = "Truck"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "1*4":
+            type_of_wash = "Full Body Wash"
+            car_type = "Lorry"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
 
     return response        
      
