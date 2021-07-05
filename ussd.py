@@ -213,6 +213,72 @@ def ussd_callback():
             car_type = "Lorry"
             car_registration = request.values["text"][4:]
             response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        
+        # Final Menu for Interior Wash
+        if choices == "4*1":
+            type_of_wash = "Interior Wash"
+            car_type = "Sedan"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "4*2":
+            type_of_wash = "Interior Wash"
+            car_type = "Suv"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "4*3":
+            type_of_wash = "Interior Wash"
+            car_type = "Truck"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "4*4":
+            type_of_wash = "Interior Wash"
+            car_type = "Lorry"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        
+        # Final Menu for Waxing
+        if choices == "5*1":
+            type_of_wash = "Waxing"
+            car_type = "Sedan"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "5*2":
+            type_of_wash = "Waxing"
+            car_type = "Suv"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "5*3":
+            type_of_wash = "Waxing"
+            car_type = "Truck"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "5*4":
+            type_of_wash = "Waxing"
+            car_type = "Lorry"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        
+        # Final Menu for Dusting
+        if choices == "6*1":
+            type_of_wash = "Dusting"
+            car_type = "Sedan"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "6*2":
+            type_of_wash = "Dusting"
+            car_type = "Suv"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "6*3":
+            type_of_wash = "Dusting"
+            car_type = "Truck"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
+        elif choices == "6*4":
+            type_of_wash = "Dusting"
+            car_type = "Lorry"
+            car_registration = request.values["text"][4:]
+            response = f"END Car Wash Type: {type_of_wash}/n. Vehicle Type: {car_type}/n. Vehicle Registration: {car_registration}/n."
 
     return response        
      
