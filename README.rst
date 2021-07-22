@@ -3,7 +3,7 @@ Flask
 
 For demo purposes, the USSD Flask app runs on Flask-Ngrok, this automatically gives a you a ngrok link that shall be used as the callback URL. 
 Copy the link given (https) and paste it at the callback for the USSD code.
-After the system dashboard is done, we shall now deploy our system using apache2, instructions to be provided on the next commit.
+After the testing is done, we shall now deploy our system using apache and setup the database, instructions to be provided on the next commit.
 
 
 Installing and Running.
