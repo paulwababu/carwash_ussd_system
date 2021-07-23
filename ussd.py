@@ -7,13 +7,13 @@ import africastalking
 from werkzeug.wrappers.response import Response 
 
 app = Flask(__name__)
-run_with_ngrok(app)
+#run_with_ngrok(app)
 username = "sandbox"
 api_key = "17f2d3cb46b40d864a084736b597637efd73f309fed924d1fdb04640bdaed6aa"
 africastalking.initialize(username, api_key)
 sms = africastalking.SMS
 
-@app.route('/api/ussd/callback', methods=['POST'])
+@app.route('/', methods=['POST'])
 def ussd_callback():
     session_id = request.values.get("sessionId", None)
     serviceCode = request.values.get("serviceCode", None)
@@ -286,4 +286,4 @@ def ussd_callback():
 
 
 if __name__ == "__main__":
-        app.run()
+        app.run(host="0.0.0.0", port=os.environ.get("PORT"))
