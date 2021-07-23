@@ -20,7 +20,7 @@ Install and update using `pip`_:
 
 .. code-block:: text
 
-    $ pip3 install flask-ngrok
+    $ pip3 install flask-ngrok (SKIP INSTALLATION IF YOU WISH TO RUN ON SERVER)
 
 
 .. code-block:: text
