@@ -2,14 +2,14 @@ from africastalking.Service import Service
 from flask import Flask
 from flask import request
 from flask import make_response
-from flask_ngrok import run_with_ngrok
+#from flask_ngrok import run_with_ngrok
 import africastalking
 from werkzeug.wrappers.response import Response 
 
 app = Flask(__name__)
 #run_with_ngrok(app)
-username = "sandbox"
-api_key = "17f2d3cb46b40d864a084736b597637efd73f309fed924d1fdb04640bdaed6aa"
+username = "ussdtest"
+api_key = "3ed667b62103c175a43b466897a0edaea5e5dbead454b7c6441ef084a1f6f7a1"
 africastalking.initialize(username, api_key)
 sms = africastalking.SMS
 
@@ -287,4 +287,4 @@ def ussd_callback():
 
 if __name__ == "__main__":
     app.run()
-        #app.run(host="0.0.0.0", port=os.environ.get("PORT"))
+        #app.run()
