@@ -1,5 +1,5 @@
-Flask
-=====
+Flask USSD
+==========
 
 For demo purposes, the USSD Flask app runs on Flask-Ngrok, this automatically gives a you a ngrok link that shall be used as the callback URL. 
 Copy the link given (https) and paste it at the callback for the USSD code.
@@ -49,11 +49,6 @@ Add the following lines of code to the file to configure the virtual host. Be su
 		ServerAdmin admin@mywebsite.com
 		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
 		<Directory /var/www/FlaskApp/FlaskApp/>
-			Order allow,deny
-			Allow from all
-		</Directory>
-		Alias /static /var/www/FlaskApp/FlaskApp/static
-		<Directory /var/www/FlaskApp/FlaskApp/static/>
 			Order allow,deny
 			Allow from all
 		</Directory>
